@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en" data-bs-spy="scroll" data-bs-target="#subnav" data-bs-offset="120">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Epiteach • Meet our Tutors</title>
+  <meta name="description" content="Meet Epiteach tutors—experienced instructors for international & Nigerian exams, special needs, and teacher CPD." />
+  <!-- Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Site CSS -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body class="tutors-page">
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container py-3 d-flex justify-content-between align-items-center">
+       <a class="navbar-brand d-inline-flex align-items-center" href="#home" aria-label="Epiteach">
+      <img src="images/logo.png" alt="Epiteach" class="brand-logo">
+    </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="meetthetutors.html">Meet the Tutors</a></li>
+          <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+          <li class="nav-item"><a class="btn btn-orange ms-lg-2" href="index.html#contact">Talk to a coordinator</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header id="top" class="section-panel page-hero position-relative">
+    <div class="container position-relative" style="z-index:1">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-7">
+          <span class="badge-free mb-3 d-inline-flex align-items-center gap-2">
+            <i class="bi bi-stars"></i> Meet our team
+          </span>
+          <h1 class="fw-bold mb-2">Experienced, friendly & results-driven tutors</h1>
+          <p class="lead text-secondary mb-0">IGCSE • A-Level • WAEC • NECO • JAMB • IELTS/TOEFL • Special Needs • Teacher CPD</p>
+        </div>
+        <div class="col-lg-5 d-flex justify-content-lg-end">
+          <div class="ph-box rounded-xl" style="width:78%;aspect-ratio:4/3;">
+            <img src="images/meetourtutors.jpg"
+                 class="w-100 rounded-xl" style="height:100%;object-fit:cover" alt="Meet the Epiteach tutors" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Decor -->
+    <div class="decor tu-hero-1 floaty-slow reveal">
+      <svg width="180" height="180" viewBox="0 0 180 180" fill="none" aria-hidden="true">
+        <circle cx="90" cy="90" r="78" class="thin dash stroke-orange"/>
+      </svg>
+    </div>
+    <div class="decor tu-hero-2 floaty-fast reveal">
+      <svg width="220" height="220" viewBox="0 0 220 220" fill="none" aria-hidden="true">
+        <rect x="18" y="18" width="184" height="184" rx="30" class="thick stroke-teal"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- FILTER BAR -->
+  <section class="section-panel">
+    <div class="container">
+      <div class="row g-3 align-items-end">
+        <div class="col-md-5">
+          <label class="form-label fw-semibold">Search tutors</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-search"></i></span>
+            <input id="tSearch" class="form-control" placeholder="Name, subject, or keyword…">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label fw-semibold">Subject</label>
+          <select id="tSubject" class="form-select">
+            <option value="">All subjects</option>
+            <option>Mathematics</option>
+            <option>English</option>
+            <option>Physics</option>
+            <option>Chemistry</option>
+            <option>Biology</option>
+            <option>Economics</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label fw-semibold">Programme</label>
+          <select id="tLevel" class="form-select">
+            <option value="">All programmes</option>
+            <option>International</option>
+            <option>Nigerian</option>
+            <option>Special Needs</option>
+            <option>Teacher CPD</option>
+          </select>
+        </div>
+        <div class="col-md-1 d-grid">
+          <button id="tReset" class="btn btn-outline-secondary"><i class="bi bi-arrow-counterclockwise"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TUTORS GRID -->
+  <section class="section-panel">
+    <div class="container">
+      <div id="tutorGrid" class="row g-4">
+        <!-- Card (repeat) -->
+        <div class="col-sm-6 col-lg-4 col-xxl-3" 
+             data-name="Adaeze Okafor" 
+             data-subjects="Mathematics,Physics" 
+             data-level="International">
+          <article class="tutor-card h-100">
+            <img class="tutor-photo" src="https://i.pravatar.cc/420?img=12" alt="Tutor photo">
+            <div class="tutor-body">
+              <h6 class="fw-bold mb-0">Adaeze Okafor</h6>
+              <div class="small text-muted">IGCSE & A-Level Maths / Physics</div>
+              <div class="tags mt-2">
+                <span class="chip"><i class="bi bi-mortarboard me-1"></i>Mathematics</span>
+                <span class="chip"><i class="bi bi-lightning me-1"></i>Physics</span>
+              </div>
+              <p class="small text-secondary mt-2 mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit nisl vitae sapien cursus.
+              </p>
+              <div class="mt-3 d-flex gap-2">
+                <button class="btn btn-teal btn-sm" data-bs-toggle="modal" data-bs-target="#tutorModal" data-name="Adaeze Okafor">View profile</button>
+                <a class="btn btn-outline-secondary btn-sm" href="index.html#contact">Book</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 col-xxl-3" 
+             data-name="Samuel Johnson" 
+             data-subjects="English" 
+             data-level="Nigerian">
+          <article class="tutor-card h-100">
+            <img class="tutor-photo" src="https://i.pravatar.cc/420?img=9" alt="Tutor photo">
+            <div class="tutor-body">
+              <h6 class="fw-bold mb-0">Samuel Johnson</h6>
+              <div class="small text-muted">WAEC/NECO English</div>
+              <div class="tags mt-2">
+                <span class="chip"><i class="bi bi-journal-text me-1"></i>English</span>
+              </div>
+              <p class="small text-secondary mt-2 mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at libero at risus rhoncus placerat.
+              </p>
+              <div class="mt-3 d-flex gap-2">
+                <button class="btn btn-teal btn-sm" data-bs-toggle="modal" data-bs-target="#tutorModal" data-name="Samuel Johnson">View profile</button>
+                <a class="btn btn-outline-secondary btn-sm" href="index.html#contact">Book</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 col-xxl-3" 
+             data-name="Farida Bello" 
+             data-subjects="Biology,Chemistry" 
+             data-level="International">
+          <article class="tutor-card h-100">
+            <img class="tutor-photo" src="https://i.pravatar.cc/420?img=35" alt="Tutor photo">
+            <div class="tutor-body">
+              <h6 class="fw-bold mb-0">Farida Bello</h6>
+              <div class="small text-muted">A-Level Biology & Chemistry</div>
+              <div class="tags mt-2">
+                <span class="chip"><i class="bi bi-droplet me-1"></i>Biology</span>
+                <span class="chip"><i class="bi bi-beaker me-1"></i>Chemistry</span>
+              </div>
+              <p class="small text-secondary mt-2 mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis nisi vel magna facilisis.
+              </p>
+              <div class="mt-3 d-flex gap-2">
+                <button class="btn btn-teal btn-sm" data-bs-toggle="modal" data-bs-target="#tutorModal" data-name="Farida Bello">View profile</button>
+                <a class="btn btn-outline-secondary btn-sm" href="index.html#contact">Book</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 col-xxl-3" 
+             data-name="Chinedu Eze" 
+             data-subjects="Mathematics" 
+             data-level="Nigerian">
+          <article class="tutor-card h-100">
+            <img class="tutor-photo" src="https://i.pravatar.cc/420?img=25" alt="Tutor photo">
+            <div class="tutor-body">
+              <h6 class="fw-bold mb-0">Chinedu Eze</h6>
+              <div class="small text-muted">WAEC/NECO Mathematics</div>
+              <div class="tags mt-2">
+                <span class="chip"><i class="bi bi-calculator me-1"></i>Mathematics</span>
+              </div>
+              <p class="small text-secondary mt-2 mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a tortor a elit gravida fermentum.
+              </p>
+              <div class="mt-3 d-flex gap-2">
+                <button class="btn btn-teal btn-sm" data-bs-toggle="modal" data-bs-target="#tutorModal" data-name="Chinedu Eze">View profile</button>
+                <a class="btn btn-outline-secondary btn-sm" href="index.html#contact">Book</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 col-xxl-3" 
+             data-name="Amaka Nwosu" 
+             data-subjects="Special Needs,English" 
+             data-level="Special Needs">
+          <article class="tutor-card h-100">
+            <img class="tutor-photo" src="https://i.pravatar.cc/420?img=47" alt="Tutor photo">
+            <div class="tutor-body">
+              <h6 class="fw-bold mb-0">Amaka Nwosu</h6>
+              <div class="small text-muted">Deaf-friendly literacy support</div>
+              <div class="tags mt-2">
+                <span class="chip"><i class="bi bi-universal-access me-1"></i>Special Needs</span>
+                <span class="chip"><i class="bi bi-journal-text me-1"></i>English</span>
+              </div>
+              <p class="small text-secondary mt-2 mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed orci id nunc efficitur.
+              </p>
+              <div class="mt-3 d-flex gap-2">
+                <button class="btn btn-teal btn-sm" data-bs-toggle="modal" data-bs-target="#tutorModal" data-name="Amaka Nwosu">View profile</button>
+                <a class="btn btn-outline-secondary btn-sm" href="index.html#contact">Book</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 col-xxl-3" 
+             data-name="Bayo Akin" 
+             data-subjects="Economics" 
+             data-level="International">
+          <article class="tutor-card h-100">
+            <img class="tutor-photo" src="https://i.pravatar.cc/420?img=21" alt="Tutor photo">
+            <div class="tutor-body">
+              <h6 class="fw-bold mb-0">Bayo Akin</h6>
+              <div class="small text-muted">A-Level & AP Economics</div>
+              <div class="tags mt-2">
+                <span class="chip"><i class="bi bi-graph-up-arrow me-1"></i>Economics</span>
+              </div>
+              <p class="small text-secondary mt-2 mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies, leo non lobortis feugiat.
+              </p>
+              <div class="mt-3 d-flex gap-2">
+                <button class="btn btn-teal btn-sm" data-bs-toggle="modal" data-bs-target="#tutorModal" data-name="Bayo Akin">View profile</button>
+                <a class="btn btn-outline-secondary btn-sm" href="index.html#contact">Book</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 col-xxl-3" 
+             data-name="Zainab Yusuf" 
+             data-subjects="Chemistry" 
+             data-level="Nigerian">
+          <article class="tutor-card h-100">
+            <img class="tutor-photo" src="https://i.pravatar.cc/420?img=56" alt="Tutor photo">
+            <div class="tutor-body">
+              <h6 class="fw-bold mb-0">John Clement</h6>
+              <div class="small text-muted">WAEC Chemistry</div>
+              <div class="tags mt-2">
+                <span class="chip"><i class="bi bi-beaker me-1"></i>Chemistry</span>
+              </div>
+              <p class="small text-secondary mt-2 mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque congue dui non arcu congue.
+              </p>
+              <div class="mt-3 d-flex gap-2">
+                <button class="btn btn-teal btn-sm" data-bs-toggle="modal" data-bs-target="#tutorModal" data-name="Zainab Yusuf">View profile</button>
+                <a class="btn btn-outline-secondary btn-sm" href="index.html#contact">Book</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-sm-6 col-lg-4 col-xxl-3" 
+             data-name="David Okon" 
+             data-subjects="Physics" 
+             data-level="International">
+          <article class="tutor-card h-100">
+            <img class="tutor-photo" src="https://i.pravatar.cc/420?img=59" alt="Tutor photo">
+            <div class="tutor-body">
+              <h6 class="fw-bold mb-0">David Okon</h6>
+              <div class="small text-muted">SAT Physics & IGCSE</div>
+              <div class="tags mt-2">
+                <span class="chip"><i class="bi bi-lightning me-1"></i>Physics</span>
+              </div>
+              <p class="small text-secondary mt-2 mb-0">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam finibus ullamcorper augue.
+              </p>
+              <div class="mt-3 d-flex gap-2">
+                <button class="btn btn-teal btn-sm" data-bs-toggle="modal" data-bs-target="#tutorModal" data-name="David Okon">View profile</button>
+                <a class="btn btn-outline-secondary btn-sm" href="index.html#contact">Book</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Add more cards as needed… -->
+      </div>
+    </div>
+
+    <!-- Decor -->
+    <div class="decor tu-grid-1 floaty-fast reveal">
+      <svg width="180" height="180" viewBox="0 0 180 180" fill="none" aria-hidden="true">
+        <rect x="16" y="16" width="148" height="148" rx="26" class="thin dash stroke-teal"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- FOOTER (reuse) -->
+    <section id="faqs" class="section-panel">
+  <footer id="site-footer" class="mt-5" aria-label="Footer">
+    <div class="container footer-panel rounded-xl shadow-sm">
+      <div class="row g-4 align-items-center mb-4" id="newsletterPanel">
+        <div class="col-lg-6">
+          <h3 class="fw-bold mb-1">Join our newsletter</h3>
+          <p class="text-secondary mb-0">Study tips, free resources, and CPD dates.</p>
+        </div>
+        <div class="col-lg-6">
+          <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="newsletter-form">
+            <input type="hidden" name="form-name" value="newsletter">
+            <div class="visually-hidden"><label>Don’t fill this out: <input name="bot-field"></label></div>
+            <div class="input-group input-group-lg">
+              <input type="email" class="form-control" name="email" placeholder="Your email address" required>
+              <button class="btn btn-teal" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <a class="navbar-brand fw-bold d-inline-flex align-items-center mb-2" href="index.html#home">
+            <span class="text-teal">Epi</span><span class="text-orange">teach</span>
+          </a>
+          <p class="text-secondary mb-3">Personalised tutoring • Special needs support • Teacher CPD.</p>
+          <div class="d-flex gap-2">
+            <a class="social-btn" href="#"><i class="bi bi-whatsapp"></i></a>
+            <a class="social-btn" href="#"><i class="bi bi-instagram"></i></a>
+            <a class="social-btn" href="#"><i class="bi bi-twitter-x"></i></a>
+            <a class="social-btn" href="#"><i class="bi bi-linkedin"></i></a>
+            <a class="social-btn" href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-md-2">
+          <h6 class="fw-semibold mb-2">Navigate</h6>
+          <ul class="list-unstyled small mb-0">
+            <li><a class="footer-link" href="#top">Top</a></li>
+            <li><a class="footer-link" href="services.html">Services</a></li>
+            <li><a class="footer-link" href="about.html">About</a></li>
+            <li><a class="footer-link" href="feedback.html">Feedback</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h6 class="fw-semibold mb-2">Contact</h6>
+          <ul class="list-unstyled small mb-0">
+            <li class="d-flex gap-2 align-items-start"><i class="bi bi-envelope-open text-teal mt-1"></i><span>info@epiteach.com<br>admin@epiteach.com</span></li>
+            <li class="d-flex gap-2 align-items-start mt-2"><i class="bi bi-telephone text-teal mt-1"></i><a class="footer-link" href="https://wa.me/2340000000000" target="_blank">WhatsApp us</a></li>
+            <li class="d-flex gap-2 align-items-start mt-2"><i class="bi bi-geo-alt text-teal mt-1"></i><span>Remote • Nigeria • International</span></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="fw-semibold mb-2">Legal</h6>
+          <ul class="list-unstyled small mb-3">
+            <li><a class="footer-link" href="/terms.html">Terms & Conditions</a></li>
+            <li><a class="footer-link" href="/privacy.html">Privacy Policy</a></li>
+          </ul>
+          <div class="small text-muted">© <span id="year"></span> Epiteach. All rights reserved.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </section>
+
+  <!-- Tutor Modal -->
+  <div class="modal fade" id="tutorModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title">Tutor profile</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4 align-items-start">
+            <div class="col-md-4">
+              <img id="tmPhoto" class="w-100 rounded-3" src="" alt="Tutor photo">
+            </div>
+            <div class="col-md-8">
+              <h4 id="tmName" class="fw-bold mb-1">Tutor Name</h4>
+              <div id="tmRole" class="text-secondary mb-2 small">Role/Subjects</div>
+              <p id="tmBio" class="mb-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id lectus a ante blandit maximus.
+              </p>
+              <div id="tmTags" class="d-flex flex-wrap gap-2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="index.html#contact" class="btn btn-teal">Book this tutor</a>
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap + Page JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Year
+    const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+    // Reveal shapes
+    (function(){
+      const items = document.querySelectorAll('.reveal');
+      if(!items.length || !('IntersectionObserver' in window)) return;
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){ e.target.classList.add('is-visible'); obs.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: .15 });
+      items.forEach(el => obs.observe(el));
+    })();
+
+    // Simple filtering
+    (function(){
+      const grid = document.getElementById('tutorGrid');
+      if(!grid) return;
+      const cards = [...grid.children];
+      const q = document.getElementById('tSearch');
+      const s = document.getElementById('tSubject');
+      const l = document.getElementById('tLevel');
+      const r = document.getElementById('tReset');
+
+      function match(text, needle){
+        return text.toLowerCase().includes(needle.toLowerCase());
+      }
+      function apply(){
+        const query = (q.value || '').trim();
+        const subj = s.value || '';
+        const lev  = l.value || '';
+
+        cards.forEach(col=>{
+          const name = col.dataset.name || '';
+          const subjects = col.dataset.subjects || '';
+          const level = col.dataset.level || '';
+          const blob = (col.textContent || '');
+
+          const okQuery = !query || match(name, query) || match(subjects, query) || match(blob, query);
+          const okSubj  = !subj || subjects.split(',').some(x => x.trim() === subj);
+          const okLev   = !lev || level === lev;
+
+          col.style.display = (okQuery && okSubj && okLev) ? '' : 'none';
+        });
+      }
+
+      q.addEventListener('input', apply);
+      s.addEventListener('change', apply);
+      l.addEventListener('change', apply);
+      r.addEventListener('click', ()=>{
+        q.value = ''; s.value = ''; l.value = ''; apply();
+      });
+
+      apply();
+    })();
+
+    // Modal population
+    (function(){
+      const modal = document.getElementById('tutorModal');
+      if(!modal) return;
+
+      modal.addEventListener('show.bs.modal', function (ev){
+        const btn = ev.relatedTarget;
+        const name = btn?.getAttribute('data-name') || 'Tutor Name';
+
+        // find the card
+        const card = [...document.querySelectorAll('#tutorGrid [data-name]')].find(c => c.dataset.name === name);
+        const photo = card?.querySelector('.tutor-photo')?.src || 'https://i.pravatar.cc/420?img=1';
+        const role  = card?.querySelector('.small.text-muted')?.textContent || 'Subjects';
+        const tags  = [...(card?.querySelectorAll('.tags .chip') || [])].map(t => t.textContent.trim());
+
+        modal.querySelector('#tmName').textContent = name;
+        modal.querySelector('#tmRole').textContent = role;
+        modal.querySelector('#tmPhoto').src = photo;
+        modal.querySelector('#tmBio').textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id lectus a ante blandit maximus. Integer pulvinar, nibh ac placerat tempor, massa arcu bibendum eros, eget molestie tellus nibh in nisl.';
+        const tagWrap = modal.querySelector('#tmTags');
+        tagWrap.innerHTML = '';
+        tags.forEach(t=>{
+          const el = document.createElement('span');
+          el.className = 'chip';
+          el.textContent = t;
+          tagWrap.appendChild(el);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

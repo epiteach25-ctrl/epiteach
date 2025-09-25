@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Epiteach • Personalised Online Tutoring & Teacher CPD</title>
+  <meta name="description" content="Epiteach provides personalised online tutoring for international & Nigerian exams, accessible support for deaf learners, and teacher CPD. Flexible schedules, clear progress, Netlify-ready site." />
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Site CSS -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAV (transparent overlay on hero) -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container align-items-center">
+      <!-- Left (orange): logo + nav -->
+      <div class="d-flex align-items-center gap-4 flex-grow-1">
+    
+<!-- With this -->
+  <a class="navbar-brand d-inline-flex align-items-center" href="#home" aria-label="Epiteach">
+      <img src="images/logo.png" alt="Epiteach" class="brand-logo">
+    </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto text-end ms-3 mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#home" data-hovercard="Home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services" data-hovercard="What we offer">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about" data-hovercard="Who we are">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#meetthetutors" data-hovercard="Meet the Tutors">Meet the Tutors</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Feedback" data-hovercard="Talk to us">Feedback</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Right (green): buttons -->
+      <div class="d-none d-lg-flex align-items-center gap-2">
+        <a class="btn btn-outline-secondary" href="#" data-hovercard="Get Started3">Register</a>
+        <a class="btn btn-orange" href="#contact" data-hovercard="Talk to a coordinator">Talk to a coordinator</a>
+        <!-- Collapsed menu -->
+    <div class="collapse navbar-collapse" id="nav">
+      <!-- your <ul class="navbar-nav …"> … -->
+    </div>
+  </div>
+</nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero position-relative">
+    <div class="container position-relative" style="z-index:1">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6">
+          <span class="badge-free mb-3 d-inline-flex align-items-center gap-2">
+            <i class="bi bi-stars"></i> Free learning plan & consultation
+          </span>
+          <h1 class="mb-3">Great Teachers, Greater Outcomes</h1>
+          <p class="text-secondary mb-4">
+            IGCSE, A-Level, SAT/ACT, IELTS/TOEFL, AP • WAEC, NECO, JAMB, BECE.  
+            Specialist support for deaf learners. Flexible schedules that fit your life.
+          </p>
+          <div class="actions d-flex flex-wrap gap-3">
+            <!-- Replace the number below with your WhatsApp business number -->
+            <a href="https://wa.me/2340000000000" class="btn btn-teal get-in-button" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp me-2 get-in-button"></i>Get in Touch
+            </a>
+            <a class="btn btn-outline-secondary" href="#services">
+              <i class="bi bi-list-task me-2"></i>See Services
+            </a>
+          </div>
+          <div class="d-flex align-items-center gap-3 mt-4">
+            <div class="student-strip d-flex align-items-center">
+              <img src="https://i.pravatar.cc/36?img=1" alt="student">
+              <img src="images/homepage2.jpg" alt="student">
+              <img src="images/herosmall1.jpg" alt="student">
+              <img src="images/herosmall2.jpg" alt="student">
+            </div>
+            <div class="metric">Nigeria • Africa • Diaspora</div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+
+  <div class="card hero-card rounded-xl shadow-sm striped position-relative overflow-hidden" id="heroVisual">
+  <!-- Main image -->
+  <img
+    src="images/hero1.png"
+    alt="Engaging online tutoring at Epiteach"
+    class="hero-img parallax"
+    data-depth="30"
+  />
+
+
+  <!-- Glassy badges (fun but useful highlights) -->
+  <div class="hero-badge parallax" data-depth="40">
+    <i class="bi bi-lightning-charge me-1"></i> Engaging lessons
+  </div>
+  <div class="hero-badge hero-badge--alt parallax" data-depth="48">
+    <i class="bi bi-shield-check me-1"></i> Expert tutors
+  </div>
+
+  <!-- Keep your subtle pattern if you like -->
+  <div class="pattern"></div>
+</div>
+
+
+    <!-- Decor: HERO -->
+<div class="decor h-decor-1 floaty-slow reveal">
+  <svg width="160" height="160" viewBox="0 0 160 160" fill="none" aria-hidden="true">
+    <circle cx="80" cy="80" r="68" class="thin dash stroke-orange"/>
+  </svg>
+</div>
+<div class="decor h-decor-2 floaty-fast reveal">
+  <svg width="200" height="200" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+    <rect x="16" y="16" width="168" height="168" rx="28" class="thick stroke-teal"/>
+  </svg>
+</div>
+<div class="decor h-decor-3 floaty-slow reveal">
+  <svg width="220" height="120" viewBox="0 0 220 120" fill="none" aria-hidden="true">
+    <path d="M10 100 C70 20, 150 80, 210 20" class="thick stroke-orange" stroke-linecap="round"/>
+  </svg>
+</div>
+  </header>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="section-sub">— Services</p>
+        <h2 class="fw-bold">Tutoring for international & Nigerian exams, plus Teacher CPD</h2>
+        <p class="text-secondary">Structured lessons, clear outcomes, and resources aligned to each learner’s goals.</p>
+      </div>
+      <div class="row g-4 align-items-stretch">
+  <!-- 1) White (default) -->
+  <div class="col-6 col-lg-3">
+    <div class="card cat-card rounded-xl h-100 p-3">
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <i class="bi bi-globe-americas fs-3 text-teal"></i><strong>International Exams</strong>
+      </div>
+      <p class="text-muted small mb-0">IGCSE, A-Level, SAT/ACT, IELTS/TOEFL, AP with specialist tutors.</p>
+    </div>
+
+    <!-- Decor: SERVICES -->
+<div class="decor s-decor-1 floaty-fast reveal">
+  <svg width="180" height="180" viewBox="0 0 180 180" fill="none" aria-hidden="true">
+    <circle cx="90" cy="90" r="78" class="thin stroke-teal"/>
+  </svg>
+</div>
+<div class="decor s-decor-2 floaty-slow reveal">
+  <svg width="220" height="120" viewBox="0 0 220 120" fill="none" aria-hidden="true">
+    <path d="M10 60 H210" class="thin dash stroke-orange" stroke-linecap="round"/>
+    <path d="M110 10 V110" class="thin dash stroke-orange" stroke-linecap="round"/>
+  </svg>
+</div>
+  </div>
+
+  <!-- 2) Teal -->
+  <div class="col-6 col-lg-3">
+    <div class="card cat-card cat-card--teal rounded-xl h-100 p-3">
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <i class="bi bi-journal-check fs-3"></i><strong>Nigerian Exams</strong>
+      </div>
+      <p class="small mb-0">WAEC, NECO, JAMB, BECE with syllabus-aligned lessons and practice.</p>
+    </div>
+  </div>
+
+  <!-- 3) White (default) -->
+  <div class="col-6 col-lg-3">
+    <div class="card cat-card rounded-xl h-100 p-3">
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <i class="bi bi-universal-access fs-3 text-info"></i><strong>Special Needs</strong>
+      </div>
+      <p class="text-muted small mb-0">Accessible, deaf-friendly tutoring with clear visuals and paced delivery.</p>
+    </div>
+  </div>
+
+  <!-- 4) Orange -->
+  <div class="col-6 col-lg-3">
+    <div class="card cat-card cat-card--orange rounded-xl h-100 p-3">
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <i class="bi bi-award fs-3"></i><strong>Teacher CPD</strong>
+      </div>
+      <p class="small mb-0">Courses, webinars & coaching for career growth and classroom impact.</p>
+    </div>
+  </div>
+</div>
+
+
+    <!-- PRICING -->
+<section id="pricing" aria-label="Pricing">
+  <div class="container">
+    <div class="pricing-panel rounded-xl shadow-sm" id="pricingPanel">
+      <div class="accent-bar"></div>
+
+      <div class="text-center mb-4">
+        <p class="section-sub">— Pricing</p>
+        <h2 class="fw-bold m-0">Clear, flexible rates</h2>
+        <p class="text-secondary mt-2 mb-0">Choose what fits. No hidden fees.</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- International (1-to-1) -->
+        <div class="col-md-4">
+          <div class="pricing-card pricing--intl h-100">
+            <div class="badge-tier">International 1-to-1</div>
+            <div class="price">
+              <span class="currency">₦</span>25,000<span class="per">/hr</span>
+            </div>
+            <ul class="list-unstyled small text-muted mb-4">
+              <li><i class="bi bi-check2-circle me-1 text-teal"></i> IGCSE, A-Level, SAT/ACT, IELTS/TOEFL, AP</li>
+              
+              <li><i class="bi bi-check2-circle me-1 text-teal"></i> Progress tracking</li>
+            </ul>
+            <a href="#contact" class="btn btn-teal w-100 pricing-one-button">Request a timetable</a>
+          </div>
+        </div>
+
+        <!-- Nigerian (1-to-1) -->
+        <div class="col-md-4">
+          <div class="pricing-card pricing--ng-one h-100">
+            <div class="badge-tier">Nigerian 1-to-1</div>
+            <div class="price">
+              <span class="currency">₦</span>8,000<span class="per">/hr</span>
+            </div>
+            <ul class="list-unstyled small text-muted mb-4">
+              <li><i class="bi bi-check2-circle me-1 text-teal"></i> WAEC, NECO, JAMB, BECE</li>
+              <li><i class="bi bi-check2-circle me-1 text-teal"></i> Syllabus-aligned lessons</li>
+              <li><i class="bi bi-check2-circle me-1 text-teal"></i> Flexible scheduling</li>
+            </ul>
+            <a href="#contact" class="btn btn-orange w-100">Start 1-to-1</a>
+          </div>
+        </div>
+
+        <!-- Nigerian (Group) -->
+        <div class="col-md-4">
+          <div class="pricing-card pricing--ng-group h-100">
+            <div class="badge-tier">Nigerian (Group)</div>
+            <div class="price">
+              <span class="currency">₦</span>5,500<span class="per">/hr</span>
+            </div>
+            <ul class="list-unstyled small text-muted mb-4">
+              <li><i class="bi bi-check2-circle me-1 text-teal"></i> Small group classes</li>
+              <li><i class="bi bi-check2-circle me-1 text-teal"></i> Practice & feedback</li>
+              <li><i class="bi bi-check2-circle me-1 text-teal"></i> Affordable & effective</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline-secondary w-100">Join a group</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-3 small text-muted text-center">
+        Sessions are scheduled around the learner’s availability.
+      </div>
+    </div>
+  </div>
+
+  <!-- Decor: PRICING -->
+<div class="decor p-decor-1 floaty-slow reveal">
+  <svg width="180" height="180" viewBox="0 0 180 180" fill="none" aria-hidden="true">
+    <circle cx="90" cy="90" r="76" class="thin dash stroke-teal"/>
+  </svg>
+</div>
+<div class="decor p-decor-2 floaty-fast reveal">
+  <svg width="200" height="200" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+    <rect x="18" y="18" width="164" height="164" rx="28" class="thin stroke-orange"/>
+  </svg>
+</div>
+
+
+</section>
+
+  <!-- ABOUT -->
+  <section id="about" class="bg-light">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6">
+          <div class="card rounded-xl shadow-sm striped">
+            <img src="images/homepage2.jpg"
+                 class="w-100 rounded-xl" style="height:500px;object-fit:cover" alt="Online learning with Epiteach"/>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <p class="section-sub">— About Epiteach</p>
+          <h3 class="fw-bold">Promoting educational excellence through engaging, accessible learning</h3>
+          <p class="text-secondary">
+            We help students master international and Nigerian curricula with personalised support, and we help teachers grow through practical CPD. Our approach blends best teaching practices, engaging local content, and inclusive design.
+          </p>
+          <div class="row g-2 small">
+            <div class="col-6"><i class="bi bi-patch-check-fill tick me-2"></i> Exam-board expertise</div>
+            <div class="col-6"><i class="bi bi-patch-check-fill tick me-2"></i> Flexible scheduling</div>
+            <div class="col-6"><i class="bi bi-patch-check-fill tick me-2"></i> Accessible for deaf learners</div>
+            <div class="col-6"><i class="bi bi-patch-check-fill tick me-2"></i> Clear goals & feedback</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decor: ABOUT -->
+<div class="decor a-decor-1 floaty-slow reveal">
+  <svg width="160" height="160" viewBox="0 0 160 160" fill="none" aria-hidden="true">
+    <rect x="14" y="14" width="132" height="132" rx="24" class="thin dash stroke-teal"/>
+  </svg>
+</div>
+<div class="decor a-decor-2 floaty-fast reveal">
+  <svg width="220" height="120" viewBox="0 0 220 120" fill="none" aria-hidden="true">
+    <path d="M10 100 C70 30, 150 80, 210 30" class="thick stroke-orange" stroke-linecap="round"/>
+  </svg>
+</div>
+
+  </section>
+
+
+<!-- ==================== Brands that trust us ==================== -->
+<section id="brands" class="section-panel">
+  <div class="container">
+    <div class="text-center mb-3">
+      <p class="section-sub">— Partners</p>
+      <h2 class="fw-bold m-0">Brands that trust us</h2>
+    </div>
+
+    <!-- Continuous logo carousel -->
+    <div class="brand-ticker" role="region" aria-label="Partner logos carousel">
+      <div class="brand-track" style="--speed: 32s">
+        <!-- One set of logos -->
+        <a class="brand" href="#" aria-label="Client 1">
+          <img src="images/bis-logo.png" alt="Client 1 logo">
+        </a>
+        <a class="brand" href="#" aria-label="Client 2">
+          <img src="images/TRS-logo.png" alt="Client 2 logo">
+        </a>
+        <a class="brand" href="#" aria-label="Client 3">
+          <img src="images/bsi-logo.png" alt="Client 3 logo">
+        </a>
+        <a class="brand" href="#" aria-label="Client 4">
+          <img src="images/brands/brand-4.png" alt="Client 4 logo">
+        </a>
+  
+        
+
+        <!-- Duplicate the same set once for seamless looping -->
+        <a class="brand" href="#" aria-label="Client 1 duplicate">
+          <img src="images/bis-logo.png" alt="">
+        </a>
+        <a class="brand" href="#" aria-label="Client 2 duplicate">
+          <img src="images/TRS-logo.png" alt="">
+        </a>
+        <a class="brand" href="#" aria-label="Client 3 duplicate">
+          <img src="images/bsi-logo.png" alt="">
+        </a>
+        <a class="brand" href="#" aria-label="Client 4 duplicate">
+          <img src="images/brands/brand-4.png" alt="">
+        </a>
+        <a class="brand" href="#" aria-label="Client 5 duplicate">
+          <img src="images/brands/brand-5.png" alt="">
+        </a>
+        <a class="brand" href="#" aria-label="Client 6 duplicate">
+          <img src="images/brands/brand-6.png" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- (Optional) decor like other sections -->
+  <div class="decor br-decor floaty-slow reveal" aria-hidden="true">
+    <svg width="180" height="180" viewBox="0 0 180 180" fill="none">
+      <rect x="16" y="16" width="148" height="148" rx="26" class="thin dash stroke-teal"/>
+    </svg>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- CONTACT -->
+<section id="contact" aria-label="Contact">
+  <div class="container">
+    <div class="row g-0 contact-split rounded-xl overflow-visible shadow-sm position-relative">
+      <!-- Left: text & CTA (teal) -->
+      <div class="col-lg-6 contact-left d-flex align-items-center position-relative overflow-hidden">
+        <!-- subtle decorative lines -->
+        <svg class="contact-shape cs-left-1" width="220" height="220" viewBox="0 0 220 220" fill="none" aria-hidden="true">
+          <path d="M10 190 C80 80, 140 140, 210 30" stroke="rgba(255,255,255,.25)" stroke-width="6" stroke-linecap="round"/>
+        </svg>
+        <svg class="contact-shape cs-left-2" width="140" height="140" viewBox="0 0 140 140" fill="none" aria-hidden="true">
+          <circle cx="70" cy="70" r="62" stroke="rgba(255,255,255,.18)" stroke-width="4" stroke-dasharray="8 10"/>
+        </svg>
+
+        <div class="p-4 p-lg-5 text-white position-relative">
+          <h2 class="fw-bold mb-2">Ready to begin</h2>
+          <p class="mb-4">
+            Tell us the exam, your goals, and preferred schedule. An Epiteach coordinator will get back to you shortly.
+          </p>
+
+          <!-- icon list -->
+          <ul class="list-unstyled d-flex flex-wrap gap-4 small mb-4">
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-telephone-outbound"></i> WhatsApp & phone support
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-envelope-paper"></i> Quick email response
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-calendar-check"></i> Flexible scheduling
+            </li>
+          </ul>
+
+          <button class="btn btn-orange btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal">
+            Talk to a coordinator
+          </button>
+        </div>
+      </div>
+
+      <!-- Right: image placeholder (light orange) -->
+      <div class="col-lg-6 contact-right d-flex align-items-center justify-content-center position-relative">
+        <!-- decorative shapes -->
+        <svg class="contact-shape cs-right-1" width="260" height="260" viewBox="0 0 260 260" fill="none" aria-hidden="true">
+          <rect x="20" y="20" width="220" height="220" rx="32" stroke="rgba(233,106,0,.25)" stroke-width="6"/>
+        </svg>
+        <svg class="contact-shape cs-right-2" width="180" height="180" viewBox="0 0 180 180" fill="none" aria-hidden="true">
+          <path d="M10 90 H170 M90 10 V170" stroke="rgba(233,106,0,.18)" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+
+        <!-- Overlapping wrapper -->
+        <div class="ph-wrap">
+          <div class="ph-box ph-box--on-peach rounded-xl shadow-sm">
+            <img src="images/homepage3.png"
+                 class="w-100 rounded-xl" style="height:auto;object-fit:cover" alt="Contact Epiteach" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer id="site-footer" class="mt-5" aria-label="Footer">
+  <div class="container footer-panel rounded-xl shadow-sm">
+    <!-- Newsletter -->
+    <div class="row g-4 align-items-center mb-4" id="newsletterPanel">
+      <div class="col-lg-6">
+        <h3 class="fw-bold mb-1">Join our newsletter</h3>
+        <p class="text-secondary mb-0">Study tips, free resources, and new CPD dates—straight to your inbox.</p>
+      </div>
+      <div class="col-lg-6">
+        <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="newsletter-form">
+          <input type="hidden" name="form-name" value="newsletter">
+          <div class="visually-hidden">
+            <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+          </div>
+          <div class="input-group input-group-lg">
+            <input type="email" class="form-control" name="email" placeholder="Your email address" required aria-label="Email address">
+            <button class="btn btn-teal subscribe-button" type="submit">Subscribe</button>
+          </div>
+          <div class="form-text small mt-1">Unsubscribe anytime.</div>
+        </form>
+      </div>
+    </div>
+
+    <hr class="my-4">
+
+    <!-- Main footer grid -->
+    <div class="row g-4">
+      <!-- Brand & Social -->
+      <div class="col-md-4">
+        <a class="navbar-brand fw-bold d-inline-flex align-items-center mb-2" href="#home">
+          <span class="text-teal">Epi</span><span class="text-orange">teach</span>
+        </a>
+        <p class="text-secondary mb-3">Personalised online tutoring for international & Nigerian exams, specialist deaf-friendly support, and teacher CPD.</p>
+        <div class="d-flex gap-2">
+          <a class="social-btn" href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          <a class="social-btn" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a class="social-btn" href="#" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+          <a class="social-btn" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a class="social-btn" href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="col-6 col-md-2">
+        <h6 class="fw-semibold mb-2">Navigate</h6>
+        <ul class="list-unstyled small mb-0">
+          <li><a class="footer-link" href="#home">Home</a></li>
+          <li><a class="footer-link" href="#services">Services</a></li>
+          <li><a class="footer-link" href="#about">About</a></li>
+          <li><a class="footer-link" href="#meetthetutors">Meet the Tutors</a></li>
+          <li><a class="footer-link" href="#Feedback">Feedback</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-6 col-md-3">
+        <h6 class="fw-semibold mb-2">Contact</h6>
+        <ul class="list-unstyled small mb-0">
+          <li class="d-flex gap-2 align-items-start">
+            <i class="bi bi-envelope-open text-teal mt-1"></i>
+            <span>info@epiteach.com<br>admin@epiteach.com</span>
+          </li>
+          <li class="d-flex gap-2 align-items-start mt-2">
+            <i class="bi bi-telephone text-teal mt-1"></i>
+            <a class="footer-link" href="https://wa.me/2340000000000" target="_blank" rel="noopener">WhatsApp us</a>
+          </li>
+          <li class="d-flex gap-2 align-items-start mt-2">
+            <i class="bi bi-geo-alt text-teal mt-1"></i>
+            <span>Remote • Nigeria • International</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-2">Legal</h6>
+        <ul class="list-unstyled small mb-3">
+          <li><a class="footer-link" href="/terms.html">Terms & Conditions</a></li>
+          <li><a class="footer-link" href="/privacy.html">Privacy Policy</a></li>
+        </ul>
+        <div class="small text-muted">© <span id="year"></span> Epiteach. All rights reserved.</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Hover micro-info bubble -->
+  <div class="hovercard" id="hovercard" role="status" aria-live="polite"></div>
+  </div>
+
+  <!-- Contact Modal (Netlify ready) -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content rounded-xl">
+        <div class="modal-header">
+          <h5 class="modal-title">Send us a message</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact">
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input class="form-control" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="4" name="message" required placeholder="Tell us the exam, timeline, and preferred schedule…"></textarea>
+            </div>
+            <div class="text-end"><button class="btn btn-teal" type="submit">Send</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS + Site JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
