@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Epiteach — Register</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Your site styles -->
+  <link href="style.css" rel="stylesheet">
+
+  <!-- Favicons (optional) -->
+  <link rel="icon" href="assets/favicon.ico">
+</head>
+<body class="register-page">
+
+ 
+  <!-- NAV (transparent overlay on hero) -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container align-items-center">
+      <!-- Left (orange): logo + nav -->
+      <div class="d-flex align-items-center gap-4 flex-grow-1">
+    
+<!-- With this -->
+  <a class="navbar-brand d-inline-flex align-items-center" href="#home" aria-label="Epiteach">
+      <img src="images/logo.png" alt="Epiteach" class="brand-logo">
+    </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto text-end ms-3 mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html" data-hovercard="Home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html" data-hovercard="What we offer">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html" data-hovercard="Who we are">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="meetthetutors.html" data-hovercard="Meet the Tutors">Meet the Tutors</a></li>
+            <li class="nav-item"><a class="nav-link" href="feedback.html" data-hovercard="Talk to us">Feedback</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Right (green): buttons -->
+      <div class="d-none d-lg-flex align-items-center gap-2">
+
+        <a class="btn btn-orange" href="#contact" data-hovercard="Talk to a coordinator">Talk to a coordinator</a>
+        <!-- Collapsed menu -->
+    <div class="collapse navbar-collapse" id="nav">
+      <!-- your <ul class="navbar-nav …"> … -->
+    </div>
+  </div>
+</nav>
+
+      <!-- Toggler on the right -->
+      <button class="navbar-toggler ms-auto" type="button"
+              data-bs-toggle="collapse" data-bs-target="#nav"
+              aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto text-end align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item mt-2 mt-lg-0">
+            <a class="btn btn-orange w-100 w-lg-auto" href="index.html#contact">Talk to a coordinator</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Page hero ===== -->
+  <header class="page-hero" id="top" style="padding: 130px 0 56px;">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-12 col-lg-8">
+          <p class="section-sub">— Registration</p>
+          <h1 class="fw-bold m-0">Register your interest</h1>
+          <p class="lead mt-2 mb-0">
+            Share your contact details and what you’d like to learn. Our coordinator will reach out
+            to confirm your goals, schedules and the best tutor match.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Registration form (Netlify Forms) ===== -->
+  <section class="section-panel" id="register">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-lg-8">
+          <div id="registerPanel" class="p-3 p-md-4 rounded-xl">
+            <div class="accent-bar" style="position:absolute;inset:0 0 auto 0;height:6px;background:linear-gradient(90deg,var(--teal),var(--orange));opacity:.9;border-top-left-radius:var(--radius);border-top-right-radius:var(--radius);"></div>
+
+            <!-- Netlify form -->
+            <form name="Epiteach Registration" method="POST"
+                  action="/thanks.html"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                  class="mt-4"
+                  id="regForm">
+
+              <!-- Netlify form name (required) -->
+              <input type="hidden" name="form-name" value="Epiteach Registration">
+              <!-- Honeypot (spam trap) -->
+              <div style="display:none;">
+                <label>Do not fill this out: <input name="bot-field"></label>
+              </div>
+
+              <!-- Contact -->
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <label class="form-label fw-semibold">Full name <span class="text-danger">*</span></label>
+                  <input type="text" name="full_name" class="form-control" required maxlength="100" placeholder="e.g., Chiamaka Eze">
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label fw-semibold">Email <span class="text-danger">*</span></label>
+                  <input type="email" name="email" class="form-control" required maxlength="120" placeholder="you@example.com">
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label fw-semibold">Phone (Nigeria) <span class="text-danger">*</span></label>
+                  <input type="tel" name="phone" class="form-control" required inputmode="tel"
+                         pattern="^(?:\+234|0)\d{10}$"
+                         placeholder="+2348012345678 or 08012345678">
+                  <div class="form-text">Use <strong>+234</strong> or leading <strong>0</strong>, then 10 digits.</div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label fw-semibold">City/State</label>
+                  <input type="text" name="location" class="form-control" maxlength="60" placeholder="e.g., Lagos, Nigeria">
+                </div>
+              </div>
+
+              <hr class="my-4">
+
+              <!-- Interest -->
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <label class="form-label fw-semibold">Programme of interest <span class="text-danger">*</span></label>
+                  <select class="form-select" name="programme" required>
+                    <option value="" selected disabled>Select a programme</option>
+                    <option>International Exams (IGCSE, A-Level, SAT)</option>
+                    <option>Nigerian Exams (WAEC, NECO, JAMB/UTME, BECE)</option>
+                    <option>Special Needs (Deaf-friendly, accessibility)</option>
+                    <option>Teacher CPD (workshops & coaching)</option>
+                    <option>Private Tutoring (Primary/Secondary)</option>
+                    <option>Study Skills & Revision Coaching</option>
+                  </select>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label fw-semibold">Level / Subject</label>
+                  <input type="text" name="level_subject" class="form-control" maxlength="120" placeholder="e.g., IGCSE Maths, JAMB English">
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label fw-semibold">Preferred mode <span class="text-danger">*</span></label>
+                  <div class="d-flex gap-3 flex-wrap">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="mode" id="modeOnline" value="Online" required>
+                      <label class="form-check-label" for="modeOnline">Online</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="mode" id="modeInPerson" value="In-person" required>
+                      <label class="form-check-label" for="modeInPerson">In-person</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="mode" id="modeHybrid" value="Hybrid" required>
+                      <label class="form-check-label" for="modeHybrid">Hybrid</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label fw-semibold">Best time to contact</label>
+                  <select class="form-select" name="best_time">
+                    <option selected>Anytime</option>
+                    <option>Morning (8:00–12:00)</option>
+                    <option>Afternoon (12:00–16:00)</option>
+                    <option>Evening (16:00–20:00)</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label fw-semibold">Brief notes / goals</label>
+                  <textarea class="form-control" name="notes" rows="4" maxlength="600"
+                            placeholder="Tell us about the learner, timelines, target exams or grades…"></textarea>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label fw-semibold">Preferred contact method</label>
+                  <select class="form-select" name="contact_method">
+                    <option selected>Phone call</option>
+                    <option>WhatsApp</option>
+                    <option>Email</option>
+                  </select>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label fw-semibold">How did you hear about Epiteach?</label>
+                  <select class="form-select" name="referral">
+                    <option selected>— Select one —</option>
+                    <option>Friend/Family</option>
+                    <option>Instagram</option>
+                    <option>Facebook</option>
+                    <option>Google search</option>
+                    <option>School referral</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Yes" id="whatsappOpt" name="whatsapp_optin">
+                    <label class="form-check-label" for="whatsappOpt">
+                      I’m happy to receive WhatsApp/SMS updates about my registration.
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="my-4">
+
+              <!-- Consent -->
+              <div class="row g-3">
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="consent" required>
+                    <label class="form-check-label" for="consent">
+                      I agree to be contacted by an Epiteach coordinator about my request.
+                      I have read the <a class="footer-link" href="privacy.html">Privacy Policy</a>.
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <button type="submit" class="btn btn-teal btn-lg">
+                    Submit registration
+                  </button>
+                  <a href="index.html#contact" class="btn btn-outline-secondary btn-lg ms-2">
+                    Talk to a coordinator
+                  </a>
+                </div>
+              </div>
+            </form>
+
+            <!-- Fallback success (JS) -->
+            <div id="fallbackThanks" class="alert alert-success mt-4 d-none" role="alert">
+              Thank you! Your registration was submitted. A coordinator will contact you shortly.
+            </div>
+          </div>
+        </div>
+
+        <!-- Side info -->
+        <div class="col-12 col-lg-4">
+          <div class="value-card h-100">
+            <div class="value-icon mb-2"><i class="bi bi-shield-check"></i></div>
+            <h5 class="fw-bold mb-1">What happens next?</h5>
+            <ul class="mb-0 mt-2">
+              <li>We review your goals & availability.</li>
+              <li>Match you with a suitable tutor.</li>
+              <li>Share a short plan & pricing.</li>
+            </ul>
+            <hr>
+            <p class="small text-muted mb-0">
+              Need help now? Call or WhatsApp us at <strong>+234 801 234 5678</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative line (optional) -->
+    <div class="decor floaty-slow reveal" aria-hidden="true" style="right:-22px; bottom:-18px;">
+      <svg width="180" height="180" viewBox="0 0 180 180" fill="none">
+        <rect x="16" y="16" width="148" height="148" rx="26" class="thin dash stroke-teal"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+<footer id="site-footer" class="mt-5" aria-label="Footer">
+  <div class="container footer-panel rounded-xl shadow-sm">
+    <!-- Newsletter -->
+    <div class="row g-4 align-items-center mb-4" id="newsletterPanel">
+      <div class="col-lg-6">
+        <h3 class="fw-bold mb-1">Join our newsletter</h3>
+        <p class="text-secondary mb-0">Study tips, free resources, and new CPD dates—straight to your inbox.</p>
+      </div>
+      <div class="col-lg-6">
+        <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="newsletter-form">
+          <input type="hidden" name="form-name" value="newsletter">
+          <div class="visually-hidden">
+            <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+          </div>
+          <div class="input-group input-group-lg">
+            <input type="email" class="form-control" name="email" placeholder="Your email address" required aria-label="Email address">
+            <button class="btn btn-teal subscribe-button" type="submit">Subscribe</button>
+          </div>
+          <div class="form-text small mt-1">Unsubscribe anytime.</div>
+        </form>
+      </div>
+    </div>
+
+    <hr class="my-4">
+
+    <!-- Main footer grid -->
+    <div class="row g-4">
+      <!-- Brand & Social -->
+      <div class="col-md-4">
+        <a class="navbar-brand fw-bold d-inline-flex align-items-center mb-2" href="#home">
+          <span class="text-teal">Epi</span><span class="text-orange">teach</span>
+        </a>
+        <p class="text-secondary mb-3">Personalised online tutoring for international & Nigerian exams, specialist deaf-friendly support, and teacher CPD.</p>
+        <div class="d-flex gap-2">
+          <a class="social-btn" href="https://www.facebook.com/share/1B7PebBF4J/?mibextid=wwXIfr" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a class="social-btn" href="https://www.instagram.com/epiteach?igsh=MTJlZTIyN3lvb2RweA==" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a class="social-btn" href="https://lnkd.in/p/dj8Mt_Zd" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="col-6 col-md-2">
+        <h6 class="fw-semibold mb-2">Navigate</h6>
+        <ul class="list-unstyled small mb-0">
+          <li><a class="footer-link" href="index.html">Home</a></li>
+          <li><a class="footer-link" href="services.html">Services</a></li>
+          <li><a class="footer-link" href="about.html">About</a></li>
+          <li><a class="footer-link" href="meetthetutors.html">Meet the Tutors</a></li>
+          <li><a class="footer-link" href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-6 col-md-3">
+        <h6 class="fw-semibold mb-2">Contact</h6>
+        <ul class="list-unstyled small mb-0">
+          <li class="d-flex gap-2 align-items-start">
+            <i class="bi bi-envelope-open text-teal mt-1"></i>
+            <span>info@epiteach.com<br>admin@epiteach.com</span>
+          </li>
+          <li class="d-flex gap-2 align-items-start mt-2">
+            <i class="bi bi-telephone text-teal mt-1"></i>
+            <a class="footer-link" href="https://wa.me/+2348183379605" target="_blank" rel="noopener">WhatsApp us</a>
+          </li>
+          <li class="d-flex gap-2 align-items-start mt-2">
+            <i class="bi bi-geo-alt text-teal mt-1"></i>
+            <span>Remote • Nigeria • International</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-2">Legal</h6>
+        <ul class="list-unstyled small mb-3">
+          <li><a class="footer-link" href="/terms.html">Terms & Conditions</a></li>
+          <li><a class="footer-link" href="/privacy.html">Privacy Policy</a></li>
+        </ul>
+        <div class="small text-muted">© <span id="year"></span> Epiteach. All rights reserved.</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- Bootstrap + Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Optional: small helpers -->
+  <script>
+    // Footer year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Graceful fallback: If not on Netlify, intercept submit & show thank-you
+    (function(){
+      const form = document.getElementById('regForm');
+      const thanks = document.getElementById('fallbackThanks');
+      if(!form) return;
+
+      form.addEventListener('submit', function(e){
+        // If running on Netlify, let it post normally.
+        const isNetlify = location.hostname.endsWith('netlify.app') || !!document.querySelector('[data-netlify]');
+        if(isNetlify) return;
+
+        e.preventDefault();
+        const data = new FormData(form);
+        fetch('/', { method:'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(data).toString()
+        }).then(()=> {
+          form.reset();
+          thanks?.classList.remove('d-none');
+          window.scrollTo({ top: form.offsetTop - 80, behavior: 'smooth' });
+        }).catch(()=> {
+          alert('Thanks! If this was a test locally, the live site will save your submission on Netlify.');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

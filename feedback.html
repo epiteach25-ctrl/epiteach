@@ -27,10 +27,10 @@
       </button>
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#meetthetutors">Meet the Tutors</a></li>
+          <li class="nav-item"><a class="nav-link" href="meetthetutors.html">Meet the Tutors</a></li>
           <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
           <li class="nav-item"><a class="btn btn-orange ms-lg-2" href="index.html#contact">Talk to a coordinator</a></li>
         </ul>
@@ -161,76 +161,97 @@
       </svg>
     </div>
   </section>
-
-  <!-- FOOTER (reuse your site footer) -->
-    <section id="faqs" class="section-panel">
-  <footer id="site-footer" class="mt-5" aria-label="Footer">
-    <div class="container footer-panel rounded-xl shadow-sm">
-      <div class="row g-4 align-items-center mb-4" id="newsletterPanel">
-        <div class="col-lg-6">
-          <h3 class="fw-bold mb-1">Join our newsletter</h3>
-          <p class="text-secondary mb-0">Study tips, free resources, and CPD dates.</p>
-        </div>
-        <div class="col-lg-6">
-          <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="newsletter-form">
-            <input type="hidden" name="form-name" value="newsletter">
-            <div class="visually-hidden"><label>Don’t fill this out: <input name="bot-field"></label></div>
-            <div class="input-group input-group-lg">
-              <input type="email" class="form-control" name="email" placeholder="Your email address" required>
-              <button class="btn btn-teal" type="submit">Subscribe</button>
-            </div>
-          </form>
-        </div>
+<!-- FOOTER -->
+<footer id="site-footer" class="mt-5" aria-label="Footer">
+  <div class="container footer-panel rounded-xl shadow-sm">
+    <!-- Newsletter -->
+    <div class="row g-4 align-items-center mb-4" id="newsletterPanel">
+      <div class="col-lg-6">
+        <h3 class="fw-bold mb-1">Join our newsletter</h3>
+        <p class="text-secondary mb-0">Study tips, free resources, and new CPD dates—straight to your inbox.</p>
       </div>
-      <hr class="my-4">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <a class="navbar-brand fw-bold d-inline-flex align-items-center mb-2" href="index.html#home">
-            <span class="text-teal">Epi</span><span class="text-orange">teach</span>
-          </a>
-          <p class="text-secondary mb-3">Personalised tutoring • Special needs support • Teacher CPD.</p>
-          <div class="d-flex gap-2">
-            <a class="social-btn" href="#"><i class="bi bi-whatsapp"></i></a>
-            <a class="social-btn" href="#"><i class="bi bi-instagram"></i></a>
-            <a class="social-btn" href="#"><i class="bi bi-twitter-x"></i></a>
-            <a class="social-btn" href="#"><i class="bi bi-linkedin"></i></a>
-            <a class="social-btn" href="#"><i class="bi bi-youtube"></i></a>
+      <div class="col-lg-6">
+        <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="newsletter-form">
+          <input type="hidden" name="form-name" value="newsletter">
+          <div class="visually-hidden">
+            <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
           </div>
-        </div>
-        <div class="col-6 col-md-2">
-          <h6 class="fw-semibold mb-2">Navigate</h6>
-          <ul class="list-unstyled small mb-0">
-            <li><a class="footer-link" href="#form">Send a message</a></li>
-            <li><a class="footer-link" href="services.html">Services</a></li>
-            <li><a class="footer-link" href="about.html">About</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-3">
-          <h6 class="fw-semibold mb-2">Contact</h6>
-          <ul class="list-unstyled small mb-0">
-            <li class="d-flex gap-2 align-items-start"><i class="bi bi-envelope-open text-teal mt-1"></i><span>info@epiteach.com<br>admin@epiteach.com</span></li>
-            <li class="d-flex gap-2 align-items-start mt-2"><i class="bi bi-telephone text-teal mt-1"></i><a class="footer-link" href="https://wa.me/2340000000000" target="_blank">WhatsApp us</a></li>
-            <li class="d-flex gap-2 align-items-start mt-2"><i class="bi bi-geo-alt text-teal mt-1"></i><span>Remote • Nigeria • International</span></li>
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <h6 class="fw-semibold mb-2">Legal</h6>
-          <ul class="list-unstyled small mb-3">
-            <li><a class="footer-link" href="/terms.html">Terms & Conditions</a></li>
-            <li><a class="footer-link" href="/privacy.html">Privacy Policy</a></li>
-          </ul>
-          <div class="small text-muted">© <span id="year"></span> Epiteach. All rights reserved.</div>
-        </div>
+          <div class="input-group input-group-lg">
+            <input type="email" class="form-control" name="email" placeholder="Your email address" required aria-label="Email address">
+            <button class="btn btn-teal subscribe-button" type="submit">Subscribe</button>
+          </div>
+          <div class="form-text small mt-1">Unsubscribe anytime.</div>
+        </form>
       </div>
     </div>
-  </footer>
-    </section>
+
+    <hr class="my-4">
+
+    <!-- Main footer grid -->
+    <div class="row g-4">
+      <!-- Brand & Social -->
+      <div class="col-md-4">
+        <a class="navbar-brand fw-bold d-inline-flex align-items-center mb-2" href="#home">
+          <span class="text-teal">Epi</span><span class="text-orange">teach</span>
+        </a>
+        <p class="text-secondary mb-3">Personalised online tutoring for international & Nigerian exams, specialist deaf-friendly support, and teacher CPD.</p>
+        <div class="d-flex gap-2">
+          <a class="social-btn" href="https://www.facebook.com/share/1B7PebBF4J/?mibextid=wwXIfr" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a class="social-btn" href="https://www.instagram.com/epiteach?igsh=MTJlZTIyN3lvb2RweA==" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a class="social-btn" href="https://lnkd.in/p/dj8Mt_Zd" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="col-6 col-md-2">
+        <h6 class="fw-semibold mb-2">Navigate</h6>
+        <ul class="list-unstyled small mb-0">
+          <li><a class="footer-link" href="index.html">Home</a></li>
+          <li><a class="footer-link" href="services.html">Services</a></li>
+          <li><a class="footer-link" href="about.html">About</a></li>
+          <li><a class="footer-link" href="meetthetutors.html">Meet the Tutors</a></li>
+          <li><a class="footer-link" href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-6 col-md-3">
+        <h6 class="fw-semibold mb-2">Contact</h6>
+        <ul class="list-unstyled small mb-0">
+          <li class="d-flex gap-2 align-items-start">
+            <i class="bi bi-envelope-open text-teal mt-1"></i>
+            <span>info@epiteach.com<br>admin@epiteach.com</span>
+          </li>
+          <li class="d-flex gap-2 align-items-start mt-2">
+            <i class="bi bi-telephone text-teal mt-1"></i>
+            <a class="footer-link" href="https://wa.me/+2348183379605" target="_blank" rel="noopener">WhatsApp us</a>
+          </li>
+          <li class="d-flex gap-2 align-items-start mt-2">
+            <i class="bi bi-geo-alt text-teal mt-1"></i>
+            <span>Remote • Nigeria • International</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div class="col-md-3">
+        <h6 class="fw-semibold mb-2">Legal</h6>
+        <ul class="list-unstyled small mb-3">
+          <li><a class="footer-link" href="/terms.html">Terms & Conditions</a></li>
+          <li><a class="footer-link" href="/privacy.html">Privacy Policy</a></li>
+        </ul>
+        <div class="small text-muted">© <span id="year"></span> Epiteach. All rights reserved.</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
 
   <!-- Bootstrap + Page JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     // ---- CONFIG: REPLACE WITH YOUR BUSINESS WHATSAPP NUMBER (no +, no spaces)
-    const WA_NUMBER = '2348012345678'; // e.g., 23480XXXXXXX
+    const WA_NUMBER = '+2348183379605'; // 
 
     // Year
     const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
