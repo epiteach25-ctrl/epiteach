@@ -100,7 +100,7 @@ section{padding:80px 0}
   width:100%;
   height:700px !important;   /* ensure no fixed height forces a crop */
   aspect-ratio:auto !important;
-  object-fit: contain !important;   /* stop cropping top/bottom */
+  object-fit: cover !important;   /* stop cropping top/bottom */
   object-position: center center;   /* keep centered */
   margin-top: clamp(-20px, -5vw, -20px);  /* negative margin = break past pattern */
   margin-bottom: -20px;
@@ -858,12 +858,131 @@ section{ position: relative; } /* anchor for shapes */
   }
 }
 
+
+/* ===== Mobile navbar: big centered logo + hamburger on right ===== */
+@media (max-width: 991.98px){
+  .navbar.fixed-top{
+    /* taller bar so the big logo has room */
+    padding-top: 14px;
+    padding-bottom: 14px;
+    min-height: 76px;
+  }
+
+  /* position things explicitly inside the container */
+  .navbar .container{ position: relative; }
+
+  /* center the brand horizontally */
+  .navbar-brand{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0 !important;
+    z-index: 2; /* above backdrop when menu opens */
+  }
+
+  /* make the logo bigger on mobile */
+  .navbar-brand .brand-logo{
+    height: 150px;               /* adjust to taste: 64–72px looks great */
+    width: auto;
+    display: block;
+  }
+
+  /* keep the hamburger pinned to the right edge */
+  .navbar-toggler{
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    border: 0;
+    z-index: 3;
+  }
+
+  /* when the menu opens, drop it below the bar so it doesn't cover the logo */
+  .navbar .navbar-collapse{
+    position: absolute;
+    left: 0; right: 0;
+    top: 100%;
+    padding: 12px 16px;
+    background: rgba(255,255,255,.96);
+    backdrop-filter: blur(6px);
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 10px 28px rgba(2,6,23,.12);
+  }
+
+  /* align the dropdown items to the right and keep teal text as before */
+  .navbar .navbar-nav{ text-align: right; }
+  .navbar .btn{ width: 100%; margin-top: 8px; }
+}
+
+/* Optional: extra hero top space on mobile since navbar got taller */
+@media (max-width: 575.98px){
+  .page-hero{ padding-top: 130px !important; }
+}
+
+
 /* Hero section */
 @media (max-width: 767.98px) {
   header.hero {
     padding: 80px 0 32px; /* Reduce hero padding */
     text-align: center; /* Center text for mobile */
   }
+
+
+  /* Keep above-the-fold content crisp without changing your design */
+.about-blurb ul li { margin:.25rem 0; }
+
+/* Slightly tighter hero spacing on mobile */
+@media (max-width: 575.98px){
+  .page-hero { padding: 120px 0 40px !important; }
+  h1{ font-size: clamp(1.7rem, 5.6vw, 2.4rem); line-height:1.15; }
+  .lead{ font-size: clamp(1rem, 3.2vw, 1.15rem); }
+}
+
+/* If you still hide the hero image on mobile, keep this (you already asked for it earlier) */
+@media (max-width: 575.98px){
+  #heroVisual, .hero-card { display: none !important; }
+}
+
+
+/* ===== Mobile dropdown panel background ONLY (no icon/link changes) ===== */
+:root{
+  /* set this to the exact color you want for the dropdown panel */
+  --mobileMenuBg: #fef5ed; /* e.g. replace with #F28C28 if needed */
+}
+
+@media (max-width: 991.98px){
+  /* style the opened/collapsing panel, not the toggler */
+  .navbar .navbar-collapse.collapse.show,
+  .navbar .navbar-collapse.collapsing{
+    background: var(--mobileMenuBg);
+    border-radius: 0 0 16px 16px;
+    padding: 12px 16px;
+    box-shadow: 0 12px 30px rgba(2,6,23,.14);
+  }
+
+  /* keep layout tidy; no color changes to links or icon */
+  .navbar .navbar-nav{ text-align: right; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   .hero .actions {
     flex-direction: column; /* Stack buttons vertically */
@@ -1136,3 +1255,112 @@ section{ position: relative; } /* anchor for shapes */
     padding: 0.35rem 0.6rem;
   }
 }
+
+
+
+
+ /* Copy-only pricing section — comfy spacing and tidy cards */
+#pricing .pricing-card{
+  background:#fff;
+  border:1px solid rgba(2,6,23,.08);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  box-shadow: 0 10px 28px rgba(2,6,23,.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+#pricing .pricing-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 18px 50px rgba(2,6,23,.10);
+}
+@media (max-width: 575.98px){
+  #pricing .lead{ font-size: 1rem; }
+}
+
+
+.brand-logo-footer{
+  height: 30px;
+margin-top: 0px;
+}
+
+.footer-brand{
+  margin-bottom: 0px
+}
+
+
+
+
+
+
+
+/* ===== Smaller hero visual card (desktop & tablet) ===== */
+/* ===== Smaller hero visual card (desktop & tablet) ===== */
+#heroVisual{
+  /* cap the card’s width and center it in its column */
+  width: min(100%, 420px);
+  margin-left: auto;              /* keeps it flush to the right on large screens */
+  margin-right: 0;
+  padding: 12px !important;       /* slightly slimmer padding */
+  border-radius: var(--radius);
+}
+
+/* If your right column looked too tall, reduce the image itself */
+#heroVisual .hero-img{
+  width: 100%;
+  height: auto !important;        /* respect the new (smaller) image size */
+  max-height: 360px;              /* hard cap so it never grows too tall */
+  object-fit: contain !important; /* never crop your smaller photo */
+  margin-top: 0 !important;       /* remove previous negative margins */
+  margin-bottom: 0 !important;
+  border-radius: var(--radius);
+}
+
+/* Optional: soften or remove any inner pattern so the smaller card feels clean */
+#heroVisual .pattern{ opacity: .06; }
+#heroVisual.striped::before{ content: none !important; }
+
+/* Tablet tweak */
+@media (max-width: 1199.98px){
+  #heroVisual{ width: min(100%, 380px); }
+  #heroVisual .hero-img{ max-height: 320px; }
+}
+
+/* You mentioned hiding the visual on phones earlier; keep that if desired */
+@media (max-width: 575.98px){
+  #heroVisual{ display: none !important; }
+}
+
+
+
+
+/* Keep hero card no wider than the actual image pixels */
+#heroVisual { width: auto; max-width: 100%; }
+#heroVisual .hero-img {
+  display: block;
+  width: auto;         /* display at natural size when possible */
+  max-width: 100%;     /* still responsive */
+  height: auto;        /* keep aspect ratio */
+  object-fit: contain; /* never crop */
+}
+
+
+
+
+
+/* Crisp hero cutout behavior */
+#heroVisual { overflow: visible; }
+#heroVisual .hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;        /* preserves face & edges */
+  object-position: center;
+  border-radius: var(--radius);
+}
+
+/* If you want it to feel bigger without stretching: let it peek out a bit */
+@media (min-width: 992px){
+  #heroVisual picture { display:block; }
+  #heroVisual .hero-img { transform: translateY(-4%); }
+}
+
+

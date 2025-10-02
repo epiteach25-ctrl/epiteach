@@ -59,11 +59,31 @@
           <span class="badge-free mb-3 d-inline-flex align-items-center gap-2">
             <i class="bi bi-stars"></i> Free learning plan & consultation
           </span>
-          <h1 class="mb-3">Great Teachers, Greater Outcomes</h1>
-          <p class="text-secondary mb-4">
-            IGCSE, A-Level, SAT/ACT, IELTS/TOEFL, AP • WAEC, NECO, JAMB, BECE.  
-            Specialist support for deaf learners. Flexible schedules that fit your life.
-          </p>
+          <!-- LEFT: Tagline + What we're about + CTAs (drop-in swap) -->
+
+<h1 class="fw-bold m-0">Great teachers, greater outcomes.</h1>
+
+<!-- What we're about (short, scannable) -->
+<div class="about-blurb mt-3">
+  <p class="lead mb-2">
+    We match learners in Nigeria and abroad with verified expert tutors for
+    <strong>international exams</strong> (IGCSE, A-Level, SAT), <strong>Nigerian exams</strong> (WAEC, NECO, JAMB),
+    <strong>special needs support</strong>, and <strong>teacher CPD</strong> — online or in-person.
+  </p>
+  <ul class="list-unstyled m-0">
+    <li class="d-flex align-items-start gap-2">
+      <i class="bi bi-check2-circle text-teal"></i> Tailored 1-to-1 or small group lessons
+    </li>
+    <li class="d-flex align-items-start gap-2">
+      <i class="bi bi-check2-circle text-teal"></i> Structured plans + exam-smart practice
+    </li>
+    <li class="d-flex align-items-start gap-2">
+      <i class="bi bi-check2-circle text-teal"></i> Safeguarding and vetted tutors
+    </li>
+  </ul>
+</div>
+
+
           <div class="actions d-flex flex-wrap gap-3">
             <!-- Replace the number below with your WhatsApp business number -->
             <a href="https://wa.me/+2348183379605" class="btn btn-teal get-in-button" target="_blank" rel="noopener">
@@ -87,12 +107,31 @@
 
   <div class="card hero-card rounded-xl shadow-sm striped position-relative overflow-hidden" id="heroVisual">
   <!-- Main image -->
-  <img
-    src="images/hero1.png"
-    alt="Engaging online tutoring at Epiteach"
-    class="hero-img parallax"
-    data-depth="30"
+  <picture>
+  <!-- Modern browsers: WebP with alpha -->
+  <source
+    type="image/webp"
+    srcset="
+      images/hero_cutout_1800.webp 1800w,
+      images/hero_cutout_2400.webp 2400w,
+      images/hero_cutout_3000.webp 3000w
+    "
+    sizes="(min-width: 1200px) 520px, (min-width: 992px) 460px, 88vw"
   />
+  <!-- Fallback: PNG with alpha -->
+  <img
+    src="images/hero_cutout_1800.png"
+    srcset="
+      images/hero_cutout_1800.png 1800w,
+      images/hero_cutout_2400.png 2400w,
+      images/hero_cutout_3000.png 3000w
+    "
+    sizes="(min-width: 1200px) 520px, (min-width: 992px) 460px, 88vw"
+    alt="Smiling student holding books"
+    class="hero-img"
+  />
+</picture>
+
 
 
   <!-- Glassy badges (fun but useful highlights) -->
@@ -190,87 +229,55 @@
 </div>
 
 
-    <!-- PRICING -->
-<section id="pricing" aria-label="Pricing">
-  <div class="container">
-    <div class="pricing-panel rounded-xl shadow-sm" id="pricingPanel">
-      <div class="accent-bar"></div>
+   <!-- ===== Pricing / Investment (copy-only) ===== -->
+<section id="pricing" class="section-panel">
+  <div class="container position-relative">
+    <!-- optional accent bar (reuses your styling tone) -->
+    <div class="accent-bar" style="position:absolute;inset:0 0 auto 0;height:6px;background:linear-gradient(90deg,var(--teal),var(--orange));opacity:.9;border-top-left-radius:var(--radius);border-top-right-radius:var(--radius);"></div>
 
-      <div class="text-center mb-4">
-        <p class="section-sub">— Pricing</p>
-        <h2 class="fw-bold m-0">Clear, flexible rates</h2>
-        <p class="text-secondary mt-2 mb-0">Choose what fits. No hidden fees.</p>
-      </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+        <div class="text-center py-3 py-md-4">
+          <p class="section-sub mb-2">— Investment</p>
+          <h2 class="fw-bold m-0">Choose the Support That Fits You</h2>
+          <p class="lead mt-2">
+            We keep our fees student-friendly while ensuring the highest quality support.
+          </p>
+        </div>
 
-      <div class="row g-4 align-items-stretch">
-        <!-- International (1-to-1) -->
-        <div class="col-md-4">
-          <div class="pricing-card pricing--intl h-100">
-            <div class="badge-tier">International 1-to-1</div>
-            <div class="price">
-              <span class="currency">₦</span>25,000<span class="per">/hr</span>
+        <div class="row g-4 mt-1">
+          <!-- Card 1 -->
+          <div class="col-12 col-md-6">
+            <div class="pricing-card h-100">
+              <h5 class="fw-bold mb-2">For International Exams</h5>
+              <p class="mb-0">
+                We provide dedicated one-to-one coaching for focused, results-driven learning.
+              </p>
             </div>
-            <ul class="list-unstyled small text-muted mb-4">
-              <li><i class="bi bi-check2-circle me-1 text-teal"></i> IGCSE, A-Level, SAT/ACT, IELTS/TOEFL, AP</li>
-              
-              <li><i class="bi bi-check2-circle me-1 text-teal"></i> Progress tracking</li>
-            </ul>
-            <a href="#contact" class="btn btn-teal w-100 pricing-one-button">Request a timetable</a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-12 col-md-6">
+            <div class="pricing-card h-100">
+              <h5 class="fw-bold mb-2">For Local Exams</h5>
+              <p class="mb-0">
+                You can opt for personalised one-to-one tutoring or join our interactive group sessions.
+              </p>
+            </div>
           </div>
         </div>
 
-        <!-- Nigerian (1-to-1) -->
-        <div class="col-md-4">
-          <div class="pricing-card pricing--ng-one h-100">
-            <div class="badge-tier">Nigerian 1-to-1</div>
-            <div class="price">
-              <span class="currency">₦</span>8,000<span class="per">/hr</span>
-            </div>
-            <ul class="list-unstyled small text-muted mb-4">
-              <li><i class="bi bi-check2-circle me-1 text-teal"></i> WAEC, NECO, JAMB, BECE</li>
-              <li><i class="bi bi-check2-circle me-1 text-teal"></i> Syllabus-aligned lessons</li>
-              <li><i class="bi bi-check2-circle me-1 text-teal"></i> Flexible scheduling</li>
-            </ul>
-            <a href="#contact" class="btn btn-orange w-100">Start 1-to-1</a>
-          </div>
-        </div>
+        <div class="text-center mt-4">
+          <p class="mb-3">Get in touch to learn more about the investment for each option.</p>
+        <button class="btn btn-teal btn-lg" type="button"
+        data-bs-toggle="modal" data-bs-target="#coordinatorModal">
+        Get My Personalized Quote
+        </button>
 
-        <!-- Nigerian (Group) -->
-        <div class="col-md-4">
-          <div class="pricing-card pricing--ng-group h-100">
-            <div class="badge-tier">Nigerian (Group)</div>
-            <div class="price">
-              <span class="currency">₦</span>5,500<span class="per">/hr</span>
-            </div>
-            <ul class="list-unstyled small text-muted mb-4">
-              <li><i class="bi bi-check2-circle me-1 text-teal"></i> Small group classes</li>
-              <li><i class="bi bi-check2-circle me-1 text-teal"></i> Practice & feedback</li>
-              <li><i class="bi bi-check2-circle me-1 text-teal"></i> Affordable & effective</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline-secondary w-100">Join a group</a>
-          </div>
         </div>
-      </div>
-
-      <div class="mt-3 small text-muted text-center">
-        Sessions are scheduled around the learner’s availability.
       </div>
     </div>
   </div>
-
-  <!-- Decor: PRICING -->
-<div class="decor p-decor-1 floaty-slow reveal">
-  <svg width="180" height="180" viewBox="0 0 180 180" fill="none" aria-hidden="true">
-    <circle cx="90" cy="90" r="76" class="thin dash stroke-teal"/>
-  </svg>
-</div>
-<div class="decor p-decor-2 floaty-fast reveal">
-  <svg width="200" height="200" viewBox="0 0 200 200" fill="none" aria-hidden="true">
-    <rect x="18" y="18" width="164" height="164" rx="28" class="thin stroke-orange"/>
-  </svg>
-</div>
-
-
 </section>
 
   <!-- ABOUT -->
@@ -466,9 +473,9 @@
     <div class="row g-4">
       <!-- Brand & Social -->
       <div class="col-md-4">
-        <a class="navbar-brand fw-bold d-inline-flex align-items-center mb-2" href="#home">
-          <span class="text-teal">Epi</span><span class="text-orange">teach</span>
-        </a>
+        <a class="footer-brand" href="#home" aria-label="Epiteach">
+      <img src="images/logo2.png" alt="Epiteach" class="brand-logo-footer">
+    </a>
         <p class="text-secondary mb-3">Personalised online tutoring for international & Nigerian exams, specialist deaf-friendly support, and teacher CPD.</p>
         <div class="d-flex gap-2">
           <a class="social-btn" href="https://www.facebook.com/share/1B7PebBF4J/?mibextid=wwXIfr" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
@@ -555,6 +562,60 @@
       </div>
     </div>
   </div>
+
+
+  <!-- Talk to a coordinator modal -->
+<div class="modal fade" id="coordinatorModal" tabindex="-1" aria-labelledby="coordinatorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4">
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold" id="coordinatorTitle">Talk to a coordinator</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <p class="mb-3">Tell us a bit about your goals and we’ll share a personalized quote.</p>
+
+        <!-- Simple contact form (optional: Netlify-ready if you want to collect inside modal) -->
+        <form name="Quick Quote" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="Quick Quote">
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Name</label>
+            <input type="text" name="name" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Phone/WhatsApp</label>
+            <input type="tel" name="phone" class="form-control" required placeholder="+234… or 0…">
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Programme</label>
+            <select class="form-select" name="programme" required>
+              <option value="" selected disabled>Select one</option>
+              <option>International Exams (IGCSE/A-Level/SAT)</option>
+              <option>Nigerian Exams (WAEC/NECO/JAMB)</option>
+              <option>Special Needs Support</option>
+              <option>Teacher CPD</option>
+              <option>Private Tutoring</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Notes (optional)</label>
+            <textarea class="form-control" name="notes" rows="3" placeholder="Targets, timelines, subjects…"></textarea>
+          </div>
+          <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-teal">Send</button>
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </form>
+
+        <!-- Or, if you don’t want a form here, replace the form above with: 
+        <a href="register.html" class="btn btn-teal">Go to full registration</a>
+        -->
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <!-- Bootstrap JS + Site JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
