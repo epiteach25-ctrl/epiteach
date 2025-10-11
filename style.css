@@ -1364,3 +1364,153 @@ margin-top: 0px;
 }
 
 
+/* ===== Primary Literacy & Numeracy Support (visual polish) ===== */
+#primary-support .ps-visual{
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;               /* keeps a calm, consistent frame */
+  background: #fff;
+  box-shadow: 0 18px 50px rgba(2,6,23,.12);
+  isolation: isolate;                 /* keep pseudo-elements contained */
+}
+
+/* thin gradient border using masking (looks premium, not loud) */
+#primary-support .ps-visual::before{
+  content:"";
+  position:absolute; inset: -1px;
+  border-radius: inherit;
+  padding: 1px;                       /* border thickness */
+  background: linear-gradient(135deg, var(--teal), var(--orange));
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  z-index: 2;
+}
+
+/* soft internal pattern so flat photos feel designed */
+#primary-support .ps-visual::after{
+  content:"";
+  position:absolute; inset:0; z-index: 0;
+  background-image:
+    radial-gradient(600px 360px at 110% 0%, rgba(14,159,110,.10), transparent 60%),
+    radial-gradient(520px 300px at -10% 110%, rgba(232,106,0,.08), transparent 60%),
+    repeating-linear-gradient(45deg, rgba(2,6,23,.06) 0 8px, transparent 8px 16px);
+  opacity: .25;
+}
+
+/* the actual photo */
+#primary-support .ps-photo{
+  position: relative; z-index: 1;
+  width: 100%; height: 100%;
+  object-fit: cover;                 /* fills frame nicely */
+  display:block;
+  transform: scale(1.02);
+  transition: transform .35s ease, filter .35s ease;
+}
+
+/* a light hover pop on larger screens only */
+@media (min-width: 992px){
+  #primary-support .ps-visual:hover .ps-photo{
+    transform: scale(1.06);
+  }
+}
+
+/* comfy spacing tune for this section */
+#primary-support .feature-list li{ margin:.35rem 0; }
+@media (max-width: 575.98px){
+  #primary-support .lead{ font-size: 1rem; }
+  #primary-support .ps-visual{ aspect-ratio: 3 / 2; } /* quicker read on phones */
+}
+
+/* optional tiny badge on the image (delete if you don't want it) */
+#primary-support .ps-badge{
+  position:absolute; left:12px; top:12px; z-index:3;
+  padding:.35rem .6rem; border-radius:10px;
+  background: rgba(255,255,255,.75);
+  border:1px solid rgba(2,6,23,.12);
+  backdrop-filter: blur(6px);
+  font-weight:600; font-size:.85rem;
+}
+
+
+@media (max-width: 991.98px){
+  #pricing .pricing-card { padding: 16px 14px; }
+}
+
+
+
+/* ===== Primary Literacy & Numeracy Support – spacing fixes ===== */
+
+/* Ensure clear space above this section (separates it from Services) */
+#primary-support.section-panel{
+  /* your section-panel already has vertical padding; enforce a comfy top */
+  padding-top: 80px !important;           /* increase if still tight */
+  margin-top: 24px;                       /* prevents margin-collapsing with prev section */
+  scroll-margin-top: 90px;                /* nice anchor jump offset under fixed navbar */
+}
+
+/* Add left padding to the text block */
+#primary-support .ps-copy{
+  padding-left: 16px;
+}
+@media (min-width: 768px){
+  #primary-support .ps-copy{ padding-left: 24px; }
+}
+@media (min-width: 1200px){
+  #primary-support .ps-copy{ padding-left: 28px; }
+}
+
+/* Keep the right visual aligned nicely with the new padding */
+#primary-support .ps-visual{ margin-left: 4px; }   /* subtle balance; adjust if needed */
+
+/* Optional: tighten on phones so it still looks neat */
+@media (max-width: 575.98px){
+  #primary-support.section-panel{ padding-top: 64px !important; }
+  #primary-support .ps-copy{ padding-left: 12px; }
+}
+
+
+
+
+
+/* Mobile: center hero text for Primary Literacy & Numeracy */
+@media (max-width: 575.98px){
+  #primary-support .ps-copy{
+    text-align: center;               /* centers h2 + subheading + lead */
+  }
+  #primary-support .ps-copy .section-sub,
+  #primary-support .ps-copy .lead{
+    margin-left: auto;
+    margin-right: auto;               /* ensure proper centering widths */
+  }
+
+  /* (Optional) center the CTA row under the text on mobile */
+  #primary-support .ps-copy .d-flex{
+    justify-content: center;
+  }
+}
+
+
+
+
+/* Mobile: tighter vertical spacing for Primary Literacy & Numeracy */
+@media (max-width: 575.98px){
+  /* shrink section padding */
+  #primary-support.section-panel{
+    padding-top: 44px !important;
+    padding-bottom: 44px !important;
+    margin-top: 16px !important;      /* gentle gap from section above */
+  }
+
+  /* tighten inner text spacing */
+  #primary-support .ps-copy .section-sub{ margin-bottom: .35rem; }
+  #primary-support .ps-copy h2{ margin-bottom: .5rem; }
+  #primary-support .ps-copy .lead{ margin-bottom: .75rem; }
+
+  /* make feature list and CTAs a touch tighter */
+  #primary-support .feature-list li{ margin: .25rem 0; }
+  #primary-support .ps-copy .d-flex{ gap: .5rem; }
+}
